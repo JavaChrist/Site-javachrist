@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main # ou ton branche principale
+  publish_mode: editorial_workflow
+  site_url: https://javachrist.netlify.app
 
 media_folder: "assets/uploads" # Où tes images seront stockées
 public_folder: "/assets/uploads"
