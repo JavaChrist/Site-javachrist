@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ededed;
+  width: 100%;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  padding: 100px 0 0px;
+  color: #000000;
+  position: relative;
+  overflow: hidden;
+  word-spacing: 20px;
+}
+
+.carousel-item {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.carousel-item img {
+  width: 100%;
+}
+
+.carousel-item .description {
+  position: absolute;
+  bottom: 150px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.818); 
+  left: 10px;
+  right: 10px;
+  display: none;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.carousel-item:hover .description {
+  display: block; 
+}
+
+
+@keyframes colorChange {
+  0% {
+    color: #0ef;
+  }
+  25% {
+    color: #00bfff;
+  }
+  50% {
+    color: #00fff9;
+  }
+  75% {
+    color: #ff8c00;
+  }
+  100% {
+    color: #0ef;
+  }
+}
+
+.sub-title::before,
+.sub-title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 110px;
+  left: 0;
+  right: 0;
+  background: rgba(7, 85, 91, 0.585);
+   color: #ffffff00;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.sub-title::before {
+  left: 7px;
+  text-shadow: -2px 0 #ff9900;
+  animation: glitch-anim-1 10s infinite linear alternate-reverse;
+}
+
+.sub-title::after {
+  left: 3px;
+  text-shadow: -2px 0 #00fff9;
+  animation: glitch-anim-2 10s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0%, 100% {
+    clip: rect(0, 900px, 0, 0);
+  }
+  10% {
+    clip: rect(40px, 9999px, 180px, 0);
+  }
+  20% {
+    clip: rect(80px, 9999px, 220px, 0);
+  }
+  30% {
+    clip: rect(120px, 9999px, 200px, 0);
+  }
+  40% {
+    clip: rect(30px, 9999px, 150px, 0);
+  }
+  50% {
+    clip: rect(50px, 9999px, 190px, 0);
+  }
+  60% {
+    clip: rect(60px, 9999px, 200px, 0);
+  }
+  70% {
+    clip: rect(90px, 9999px, 180px, 0);
+  }
+  80% {
+    clip: rect(110px, 9999px, 240px, 0); 
+  }
+  90% {
+    clip: rect(0, 900px, 0, 0);
+  }
+}
+
+
+@keyframes glitch-anim-2 {
+  0%, 100% {
+    clip: rect(0, 900px, 0, 0);
+  }
+  15% {
+    clip: rect(45px, 9999px, 180px, 0); 
+  }
+  30% {
+    clip: rect(90px, 9999px, 210px, 0); 
+  }
+  45% {
+    clip: rect(130px, 9999px, 230px, 0); 
+  }
+  60% {
+    clip: rect(70px, 9999px, 190px, 0); 
+  }
+  75% {
+    clip: rect(50px, 9999px, 220px, 0); 
+  }
+  90% {
+    clip: rect(0, 900px, 0, 0); 
+  }
+}
+
+.sub-title.animate .glitch-effect {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+  transition-delay: calc(0.1s * var(--i));
+}
+
+
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-item button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50px;
+  font-size: 16px;
+  color: #0ef;
+  text-decoration: none;
+  margin: 20px 0;
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.5s * var(--i));
+  background: #0ef;
+}
+
+.carousel-item button a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000000;
+  padding: 5px;
+}
+
+.carousel-item button:hover {
+  background: #0ef;
+  color: #081b29;
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
+  border: 1px solid #001;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-control.prev {
+  left: 10px;
+  color: rgb(0, 238, 255);
+  font-size: 50px;
+  background: none;
+}
+
+.carousel-control.prev:hover {
+  font-size: 60px;
+  color:rgb(183, 247, 5);
+}
+
+
+.carousel-control.next {
+  right: 10px;
+  color: rgb(0, 238, 255);
+  font-size: 50px;
+  background: none;
+}
+
+.carousel-control.next:hover {
+  font-size: 60px;
+  color:rgb(183, 247, 5);
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1270px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; 
+    right: 20px; 
+    background: rgba(7, 85, 91, 0.8);
+    border-radius: 10px; 
+    padding: 10px;
+    width: auto;
+  }
+
+  .navbar a {
+    padding: 10px 20px;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+  }
+
+ 
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 40px;
+    color: rgb(255, 106, 0);
+  }
+
+  .navbar.active {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    padding: 0; 
+  }
+}

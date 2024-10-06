@@ -1,0 +1,89 @@
+/* Général */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+
+
+.client-space {
+  max-width: 900px;
+  margin: 127px auto 100px; 
+  padding: 1rem;
+  background-color: rgba(7, 85, 91, 0.8); 
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.client-space h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #fff; 
+  font-weight: bold;
+}
+
+.client-space p {
+color: #fff;
+margin-bottom: 20px;
+}
+
+
+#client-info {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+#file-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.file-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.file-item:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.file-item a {
+  color: #0ef; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.file-item a:hover {
+  color: #fff;
+}
+

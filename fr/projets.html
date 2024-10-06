@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WQ3JSGMX');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets Réalisés par Christian Grohens | Développeur Web Freelance à Toulouse</title>
+  <meta name="description"
+    content="Découvrez les projets récents de Christian Grohens, développeur web freelance à Toulouse, spécialisé dans la création de sites web, UI/UX, et SEO. Visitez les sites de ses réalisations." />
+
+  <!-- Open Graph data (Facebook) -->
+  <meta property="og:url" content="https://www.javachrist.fr" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Christian Grohens - Développeur Web Freelance à Toulouse" />
+  <meta property="og:description" content="Contactez Christian Grohens pour vos projets de développement web." />
+  <meta property="og:image" content="https://www.javachrist.fr/assets/logo/Logo-Bandeau-JavaChrist.png" />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Christian Grohens - Développeur Web Freelance à Toulouse" />
+  <meta name="twitter:description" content="Contactez Christian Grohens pour vos projets de développement web." />
+  <meta name="twitter:image" content="https://www.javachrist.fr/assets/logo/Logo-Bandeau-JavaChrist.png" />
+
+
+  <link rel="shortcut icon" href="/assets/logo/favicon.ico" />
+  <link rel="stylesheet" href="/projet.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQ3JSGMX" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header class="header">
+    <div id="logo">
+      <img src="/assets/logo/Logo-Bandeau-JavaChrist.png" alt="Logo JavaChrist Développeur Web Freelance" />
+    </div>
+    <div class="ai-badge">
+      <img src="/assets/logo/google-ai-essentials.png" alt="Badge Google AI Essentials" class="ai-icon" />
+    </div>
+    <nav class="navbar" id="nav-links">
+
+      <a href="/index.html" style="--i: 1">Accueil</a>
+      <a href="/fr/info.html" style="--i: 2">Info</a>
+      <a href="/fr/services.html" style="--i: 3">Services</a>
+      <a href="/fr/projets.html" style="--i: 5">Projets</a>
+      <a href="/fr/contact.html" style="--i: 6">Contact</a>
+      <a href="/en/home.html" style="--i: 7">English</a>
+      <a href="/fr/login.html" style="--i: 8">Login</a>
+    </nav>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="bx bx-menu"></i>
+    </div>
+  </header>
+  <main>
+    <div class="sub-title" data-text="Quelques Réalisations">
+      <span>Quelques - </span> Réalisations
+    </div>
+
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/assets/image/Restaurant.webp"
+            alt="Capture d'écran d'un site web de restaurant créé par Christian Grohens" />
+
+          <div class="description">
+            Création d'un site web spécifique pour un restaurant à Toulouse. Technologies : HTML, CSS, JavaScript.
+          </div>
+          <button>
+            <a href="https://restaurant.javachrist.fr" target="_blank">En savoir plus</a>
+          </button>
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/image/Campus.webp"
+            alt="Capture d'écran d'un site web du campus créé par Christian Grohens" />
+          <div class="description">
+            Création d'un site web spécifique pour un campus universitaire. Technologies : HTML, CSS, JavaScript. Mise
+            en place
+            d'une interface intuitive pour les étudiants et le personnel.
+          </div>
+
+          <button>
+            <a href="https://gaming-campus.javachrist.fr" target="_blank">En savoir plus</a>
+          </button>
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/image/Portfolio.webp" alt="Capture d'écran du portfolio personnel de Christian Grohens" />
+          <div class="description">
+            Développement d'un portfolio personnel pour mettre en avant mes compétences en développement web.
+            Technologies : HTML, CSS, JavaScript.
+          </div>
+
+          <button>
+            <a href="https://portfolio.javachrist.fr" target="_blank">
+              En savoir plus</a>
+          </button>
+        </div>
+      </div>
+      <button class="carousel-control prev" onclick="prevSlide()">
+        &#10094;
+      </button>
+      <button class="carousel-control next" onclick="nextSlide()">
+        &#10095;
+      </button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 JavaChrist. Tous droits réservés.</p>
+    <div>
+      <a href="/fr/mentions-legales.html" class="license-link">
+        Mentions légales |
+      </a>
+      <a href="/fr/politique-confidentialite.html" class="license-link">Politique de confidentialité</a>
+    </div>
+    <div class="home-sci">
+      <a href="https://twitter.com/Mis7erC" target="_blank" rel="noopener noreferrer" style="--i: 8"><i
+          class="bx bxl-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/javachrist/" target="_blank" rel="noopener noreferrer" style="--i: 9"><i
+          class="bx bxl-linkedin"></i></a>
+      <a href="https://github.com/JavaChrist" target="_blank" rel="noopener noreferrer" style="--i: 10"><i
+          class="bx bxl-github"></i></a>
+    </div>
+  </footer>
+  <script src="/projet.js"></script>
+</body>
+
+</html>
