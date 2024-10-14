@@ -196,7 +196,16 @@ body {
 .home-sci a:hover {
   background: #0ef;
   color: #081b29;
-  box-shadow: 0 0 20px #0ef;
+  box-shadow: 0 0 20px hsl(184, 100%, 50%);
+}
+
+.logo-hood {
+  width: 20px;
+}
+
+.logo-hood a:hover {
+  color: #081b29;
+  box-shadow: 0 0 20px hsl(184, 100%, 50%);
 }
 
 @keyframes slideRight {
