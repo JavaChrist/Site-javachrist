@@ -23,7 +23,7 @@ function sendMessage() {
     const response = getResponse(message);
 
     // Ajouter la réponse du bot
-    chatbox.innerHTML += "<div><strong>Bot:</strong> " + response + "</div>";
+    chatbox.innerHTML += "<div><strong style='color: #37757a;'>Bot:</strong> " + response + "</div>";
     chatbox.scrollTop = chatbox.scrollHeight; // Scroll vers le bas
   }
 }
@@ -52,10 +52,7 @@ function getResponse(message) {
       "Le coût dépend des fonctionnalités. Pour un devis personnalisé, visitez ma page de contact : <a href='/fr/contact.html'>Page de contact</a>.",
       "Chaque projet est unique. Contactez-moi pour discuter de votre projet et obtenir un devis : <a href='/fr/contact.html'>Page de contact</a>."
     ],
-    "bonjour": [
-      "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
-      "Salut ! Que puis-je faire pour vous ?"
-    ],
+
     "langages": [
       "Je travaille principalement avec HTML, CSS, JavaScript, ainsi que des frameworks comme React et Node.js. Utilisez-vous déjà un langage ou une technologie en particulier ?",
       "Pour le développement web, j'utilise des technologies modernes telles que JavaScript, HTML5, CSS3, et des frameworks comme React. Avez-vous une préférence pour un langage ou une technologie ?",
@@ -88,10 +85,15 @@ function getResponse(message) {
     ],
     "bonjour": [
       "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
-      "Salut ! Que puis-je faire pour vous aider avec votre projet ?",
+      "Bonjour ! Que puis-je faire pour vous aider avec votre projet ?",
       "Bonjour ! En quoi puis-je vous être utile aujourd'hui ?"
     ],
     "salut": [
+      "Salut ! Comment puis-je vous aider ?",
+      "Bonjour ! Que puis-je faire pour vous aujourd'hui ?",
+      "Salut ! En quoi puis-je vous assister ?"
+    ],
+    "hello": [
       "Salut ! Comment puis-je vous aider ?",
       "Bonjour ! Que puis-je faire pour vous aujourd'hui ?",
       "Salut ! En quoi puis-je vous assister ?"
@@ -125,7 +127,122 @@ function getResponse(message) {
       "Pour démarrer, nous pouvons fixer un rendez-vous via Calendly pour discuter de vos besoins en détail : <a href='https://calendly.com/ton-calendly'>Prendre rendez-vous</a>.",
       "Pour lancer le projet, je vous invite à réserver un créneau sur mon Calendly afin que nous puissions discuter de vos attentes : <a href='https://calendly.com/ton-calendly'>Prendre rendez-vous</a>.",
       "Nous pouvons démarrer rapidement. Prenez rendez-vous pour en discuter ici : <a href='https://calendly.com/ton-calendly'>Prendre rendez-vous</a>."
+    ],
+    "services": [
+      "Je propose des services de création de sites web, de développement d'applications web, et d'optimisation SEO. Vous pouvez consulter mes services sur mon site."
+    ],
+    "type de site web": [
+      "Je peux créer des sites vitrines, des sites e-commerce, des applications web, et bien plus. Quel type de site avez-vous en tête ?"
+    ],
+    "cms": [
+      "Je travaille avec différents CMS comme WordPress, Drupal, et autres selon vos besoins."
+    ],
+    "maintenance": [
+      "Oui, je propose des services de maintenance pour garantir la sécurité et la mise à jour régulière de votre site web."
+    ],
+    "technologies préférées": [
+      "J'utilise des technologies modernes comme HTML5, CSS3, JavaScript, React, Node.js, et Flutter Flow pour le développement mobile."
+    ],
+    "processus de travail": [
+      "Mon processus inclut la découverte du projet, la définition des objectifs, le design, le développement, les tests, et enfin la mise en ligne."
+    ],
+    "tarifs": [
+      "Mes tarifs varient selon la complexité du projet. Pour obtenir un devis personnalisé, vous pouvez me contacter via ma page de contact."
+    ],
+    "exemples projets": [
+      "Oui, vous pouvez consulter mon portfolio en ligne pour voir certains de mes projets récents."
+    ],
+    "besoins spécifiques": [
+      "Nous commencerons par définir vos besoins, ensuite je vous proposerai une solution adaptée avec un devis."
+    ],
+    "delai site web": [
+      "Un site vitrine peut prendre entre 2 à 4 semaines, tandis qu'un projet plus complexe prendra plus de temps."
+    ],
+    "cout projet": [
+      "Le coût varie selon les fonctionnalités et les spécificités de votre projet. Je vous recommande de demander un devis personnalisé."
+    ],
+    "integration logo charte": [
+      "Oui, je peux intégrer votre logo et votre charte graphique dans le design du site."
+    ],
+    "assistance informatique": [
+      "Bien sûr ! Je vous accompagne tout au long du projet pour rendre les choses aussi simples que possible."
+    ],
+    "contact": [
+      "Vous pouvez me contacter via ma page de contact ou prendre un rendez-vous directement sur Calendly."
+    ],
+    "delai livraison": [
+      "Le délai dépend de la complexité du projet, mais un projet simple prend généralement entre 2 à 4 semaines."
+    ],
+    "garanties": [
+      "Je propose une garantie de qualité et de satisfaction, ainsi qu'un suivi après la mise en ligne du site."
+    ],
+    "referencement naturel": [
+      "Oui, j'assure le référencement naturel (SEO) pour que votre site soit bien positionné sur les moteurs de recherche."
+    ],
+    "responsive": [
+      "Tous les sites que je développe sont responsives, ils s'adaptent aux différents types d'appareils."
+    ],
+    "outils performance": [
+      "Oui, j'utilise des outils comme Google Analytics pour suivre les performances de votre site."
+    ],
+    "situation": [
+      "Je suis situé à Portet sur Garonne, mais je travaille avec des clients partout en France."
+    ],
+    "tarifs horaires": [
+      "Mes tarifs horaires sont ajustés en fonction du projet. Contactez-moi pour discuter de vos besoins."
+    ],
+    "forfaits": [
+      "Oui, je propose des forfaits pour certains types de projets comme la création de sites vitrine ou e-commerce."
+    ],
+    "devis": [
+      "Le devis est basé sur la complexité du projet, le nombre de pages, les fonctionnalités, et les technologies utilisées."
+    ],
+    "paiements echelonnes": [
+      "Oui, des paiements échelonnés sont possibles pour certains projets."
+    ],
+    "delai estimation": [
+      "Je peux vous donner une estimation après avoir discuté des détails de votre projet."
+    ],
+    "service urgence": [
+      "Oui, pour des besoins urgents, je propose des services accélérés avec des délais plus courts."
+    ],
+    "technologies mobile": [
+      "Pour le développement mobile, j'utilise Flutter, Flutter Flow, et React Native."
+    ],
+    "compatibilite navigateurs": [
+      "Tous les sites que je développe sont compatibles avec les principaux navigateurs."
+    ],
+    "contrat maintenance": [
+      "Je propose des contrats de maintenance pour garantir la sécurité et la mise à jour de votre site."
+    ],
+    "support technique": [
+      "Je propose un support technique par email et téléphone pour répondre à vos questions ou résoudre des problèmes."
+    ],
+    "collaboration": [
+      "Je travaille en étroite collaboration avec mes clients en restant disponible à chaque étape du projet."
+    ],
+    "outils gestion projet": [
+      "J'utilise des outils comme Trello, Notion, et TimeMate, notre propre solution de gestion du temps, pour suivre l'avancement du projet."
+    ],
+    "avancement projet": [
+      "Je vous propose des mises à jour régulières selon un planning que nous définissons ensemble."
+    ],
+    "etapes livraison": [
+      "Après validation finale, je mets en ligne le site et je vous fournis une formation pour que vous puissiez gérer son contenu."
+    ],
+    "mise en ligne": [
+      "Je m'occupe de la mise en ligne sur votre hébergement et je m'assure que tout fonctionne correctement."
+    ],
+    "formats livraison": [
+      "Je vous fournis les fichiers du site téléchargeables depuis la rubrique client de mon site, ainsi qu'une copie sur clé USB."
+    ],
+    "confidentialite donnees": [
+      "Je respecte les réglementations sur la protection des données et m'assure que votre site est sécurisé."
+    ],
+    "tendances web": [
+      "Les tendances actuelles incluent le responsive design, l'optimisation SEO, et l'intégration d'intelligence artificielle."
     ]
+
 
   };
 
