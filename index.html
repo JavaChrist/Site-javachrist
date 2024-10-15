@@ -48,9 +48,10 @@
 
 
   <!-- Stylesheets -->
-  <link href=" https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <link rel="stylesheet" href="/accueil.css" />
+  <link rel="stylesheet" href="/tchat.css" /> <!-- Ajout de la feuille de style du chat -->
 
   <!-- Scripts -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -102,6 +103,28 @@
     </div>
   </section>
 
+  <!-- Ajout du bouton rond pour ouvrir la modal -->
+  <button id="chat-button" onclick="openChat()">💬</button>
+
+  <!-- Ajout de la modal du chat -->
+  <div id="chat-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeChat()">&times;</span>
+      <div class="chat-header">
+        <div class="avatar">
+          <img src="/assets/image/Avatar 4.png" alt="Avatar">
+        </div>
+        <p>Bonjour, je suis Christ, je suis là pour répondre à vos questions.</p>
+      </div>
+      <div id="chatbox" class="chatbox"></div>
+      <div id="input-container">
+        <input type="text" id="message" placeholder="Posez votre question ici...">
+        <button id="send">Envoyer</button>
+        <button id="close-chat" onclick="closeChat()">Fermer</button>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
     <p>&copy; 2024 JavaChrist. Tous droits réservés.</p>
     <div>
@@ -122,8 +145,10 @@
 
     </div>
   </footer>
+
   <script src="/accueil.js"></script>
   <script src="/script.js"></script>
+  <script src="/tchat.js"></script> <!-- Ajout du script pour le chat -->
 </body>
 
 </html>
